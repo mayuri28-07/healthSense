@@ -1,0 +1,261 @@
+/* Base */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  margin: 0;
+  padding: 0;
+  line-height: 1.5;
+  color: #0f172a;
+  background: #f9fafb;
+}
+
+h1, h2, h3 {
+  margin: 0 0 0.5rem;
+  color: #020617;
+}
+
+p {
+  margin: 0 0 0.75rem;
+  max-width: 60rem;
+  color: #4b5563;
+}
+
+a {
+  color: inherit;
+}
+
+/* Layout helpers */
+.section-padded {
+  padding: 2.5rem 1.5rem;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.section-grid {
+  margin-top: 1.5rem;
+}
+
+/* Header */
+.site-header {
+  background: #0f172a;
+  color: #e5e7eb;
+}
+
+.site-header-inner {
+  padding: 1rem 1.5rem;
+  max-width: 1100px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem;
+}
+
+.site-nav a {
+  margin-right: 1rem;
+  color: #e5e7eb;
+  text-decoration: none;
+  font-size: 0.95rem;
+  opacity: 0.9;
+}
+
+.site-nav a:hover {
+  opacity: 1;
+  text-decoration: underline;
+}
+
+.site-header-cta {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.cart-label {
+  font-size: 0.9rem;
+}
+
+/* Hero */
+.hero {
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+}
+
+.hero-subtitle {
+  font-size: 1.05rem;
+}
+
+.hero-buttons {
+  margin-top: 1.5rem;
+  display: flex;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+}
+
+/* Buttons */
+.btn {
+  display: inline-block;
+  padding: 0.6rem 1.35rem;
+  border-radius: 999px;
+  text-decoration: none;
+  font-size: 0.95rem;
+  border: 1px solid transparent;
+  cursor: pointer;
+  transition: background 0.15s ease, color 0.15s ease, border-color 0.15s ease,
+    transform 0.1s ease;
+}
+
+.btn-primary {
+  background: #2563eb;
+  color: #ffffff;
+  border-color: #2563eb;
+}
+
+.btn-primary:hover {
+  background: #1d4ed8;
+  border-color: #1d4ed8;
+  transform: translateY(-1px);
+}
+
+.btn-secondary {
+  background: #ffffff;
+  color: #0f172a;
+  border-color: #64748b;
+}
+
+.btn-secondary:hover {
+  background: #f1f5f9;
+  transform: translateY(-1px);
+}
+
+/* Cards & grids */
+.grid {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.grid-3 {
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+}
+
+.grid-4 {
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+}
+
+.card {
+  border: 1px solid #e5e7eb;
+  border-radius: 0.75rem;
+  padding: 1.25rem;
+  background: #ffffff;
+  box-shadow: 0 1px 2px rgba(15, 23, 42, 0.04);
+}
+
+/* Stats */
+.stats {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+}
+
+.stat {
+  min-width: 140px;
+}
+
+.stat h3 {
+  font-size: 1.75rem;
+  color: #1d4ed8;
+}
+
+/* Split layout */
+.layout-split {
+  display: grid;
+  grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr);
+  gap: 2rem;
+  align-items: center;
+}
+
+.image-placeholder {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  background: #e5e7eb;
+  border-radius: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #6b7280;
+  font-size: 0.9rem;
+}
+
+/* Contact form */
+.contact-form {
+  margin-top: 1.5rem;
+  max-width: 480px;
+  display: grid;
+  gap: 0.75rem;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 0.5rem 0.6rem;
+  border-radius: 0.5rem;
+  border: 1px solid #d1d5db;
+  font: inherit;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  outline: 2px solid #2563eb;
+  outline-offset: 1px;
+  border-color: transparent;
+}
+
+.form-submit {
+  border: none;
+}
+
+/* Footer */
+.site-footer {
+  background: #0f172a;
+  color: #e5e7eb;
+  padding: 2rem 1.5rem;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.site-footer hr {
+  border: none;
+  border-top: 1px solid #1f2937;
+  margin: 1rem 0;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .site-header-inner {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .site-nav {
+    width: 100%;
+    text-align: center;
+  }
+
+  .site-nav a {
+    display: inline-block;
+    margin: 0.25rem 0.5rem;
+  }
+
+  .section-padded {
+    padding: 2rem 1rem;
+  }
+
+  .layout-split {
+    grid-template-columns: 1fr;
+  }
+}
